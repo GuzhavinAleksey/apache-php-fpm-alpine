@@ -1,7 +1,7 @@
 FROM php:7.4-fpm-alpine
 
 
-#ENV APACHE2_VERSION=2.4.46-r0
+ENV APACHE2_VERSION=2.4.46-r0
 
 # persistent dependencies
 RUN apk add --no-cache \
@@ -11,8 +11,7 @@ RUN apk add --no-cache \
 		sed \
 # Ghostscript is required for rendering PDF previews
 		ghostscript \
-		#apache2=${APACHE2_VERSION} \
-		apache2-proxy \
+		apache2-proxy=${APACHE2_VERSION} \
 	    #apache-mod-fcgid \
 	    icu-dev \
 # Alpine package for "imagemagick" contains ~120 .so files, see: https://github.com/docker-library/wordpress/pull/497
