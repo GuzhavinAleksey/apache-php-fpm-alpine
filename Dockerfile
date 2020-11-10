@@ -93,7 +93,7 @@ RUN { \
 
 EXPOSE 80
 
-VOLUME /var/www/html
+VOLUME /var/www/localhost/htdocs
 VOLUME /etc/apache2
 VOLUME /etc/apache2/sites-enabled
 
