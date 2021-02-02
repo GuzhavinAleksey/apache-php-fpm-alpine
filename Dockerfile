@@ -1,7 +1,7 @@
 FROM php:7.4-fpm-alpine
 
 
-ENV APACHE2_VERSION=2.4.46-r0
+ENV APACHE2_VERSION=2.4.46-r3
 
 # persistent dependencies
 RUN apk add --no-cache \
